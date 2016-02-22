@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body, input {
   font: menu;
+  padding: 0;
+  margin: 0;
 }
 
 .content {
@@ -8,8 +14,26 @@ body, input {
 
 .note-list {
   width: 200px;
+  height: 100vh;
+  background-color: rgb(245, 255, 255);
+  box-shadow: 5px 0 10px 1px rgba(174, 185, 185, 0.2);
 }
 
 .note-list-item {
   display: block;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.note-list-item:hover {
+  text-decoration: underline;
+}
+
+.note-list-item.active {
+  background-color: rgb(171, 255, 255);
+}
+
+.note-content {
+  padding: 0 1em;
 }

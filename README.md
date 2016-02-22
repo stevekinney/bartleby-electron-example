@@ -22,32 +22,14 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* `ember electron`
 
-### Code Generators
+## Captain's Log
 
-Make use of the many generators for code, try `ember help generate` for more details
+- Set up the basic application according to [this lesson plan][gs].
+- Ran `ember g route notes/note`.
+- Update the route and templates to match what's found in [this pull request][pr1].
+- Did some styling to make it reasonably pleasant to look at.
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+[gs]: https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/getting-bartleby-started.md
+[pr1]: https://github.com/turingschool-examples/bartleby-electron-example/pull/1/files
