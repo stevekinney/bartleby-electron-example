@@ -30,6 +30,7 @@ You will need the following things properly installed on your computer.
 - Ran `ember g route notes/note`.
 - Update the route and templates to match what's found in [this pull request][pr1].
 - Did some styling to make it reasonably pleasant to look at.
+- `ember g controller notes`
 
 [gs]: https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/getting-bartleby-started.md
 [pr1]: https://github.com/turingschool-examples/bartleby-electron-example/pull/1/files
