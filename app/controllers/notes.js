@@ -8,7 +8,11 @@ export default Ember.Controller.extend({
     createNote() {
       this.store.createRecord('note', {
         id: this.get('newNoteTitle') + '.md'
-      }).save();
+      }).save().then(data => {
+        this.transitionToRoute('notes.note', data);
+      }).then(() => {
+        this.set('newNoteTitle', null);
+      });
     }
   }
 

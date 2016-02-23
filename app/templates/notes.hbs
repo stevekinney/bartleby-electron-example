@@ -1,8 +1,11 @@
 <div class="note-list">
   <div class="new-note">
+    <form {{action 'createNote' on="submit"}}>
     {{input type="text"
             placeholder="New Note Title"
-            value=newNoteTitle}}
+            value=newNoteTitle
+            submit="createNote"}}
+    </form>
     {{#if newNoteTitle}}<button {{action 'createNote'}}>Create</button>{{/if}}
   </div>
 
