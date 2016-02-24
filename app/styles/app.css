@@ -1,22 +1,45 @@
-* {
+html {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body, input {
   font: menu;
-  padding: 0;
-  margin: 0;
 }
 
+textarea, input, div, button { outline: none; }
 .content {
   display: flex;
 }
 
+.note-header-title {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.note-status-message {
+  display: inline-block;
+}
+
 .note-list {
-  width: 200px;
+  min-width: 220px;
   height: 100vh;
   background-color: rgb(245, 255, 255);
-  box-shadow: 5px 0 10px 1px rgba(174, 185, 185, 0.2);
+  box-shadow: 0px 1px 5px 0px rgba(89, 113, 113, 0.5);
 }
 
 .note-list-item {
@@ -32,8 +55,37 @@ body, input {
 
 .note-list-item.active {
   background-color: rgb(171, 255, 255);
+  box-shadow: 0px 1px 1px 1px rgb(145, 229, 229);
+  font-weight: bold;
 }
 
 .note-content {
   padding: 0 1em;
+}
+
+.new-note-title {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(180, 100%, 89%);
+  box-shadow: 0px 1px 1px 1px rgb(145, 229, 229);
+  margin-bottom: 1em;
+}
+
+.note-body {
+  font-size: 1.2em;
+  display: block;
+  border: none;
+  width: 100vw;
+}
+
+button {
+  border: none;
+  padding: 1em;
+  background-color: rgb(180, 232, 231);
+}
+
+button:hover {
+  background-color: rgb(190, 242, 241);
 }

@@ -1,9 +1,16 @@
 <div class="note-content">
-  <h3>{{model.id}}</h3>
+  <div class="note-header">
+    <h3 class="note-header-title">{{model.id}}</h3>
+    {{#if model.hasDirtyAttributes}}
+    <p class="note-status-message">
+      This note has not been saved.
+    </p>
+    {{/if}}
+  </div>
 
-  <p>{{model.content}}</p>
+  {{textarea value=model.content class="note-body"}}
 
-  {{textarea value=model.content}}
+  <p>{{superLoud}}</p>
 
   {{#if model.hasDirtyAttributes}}<button {{action 'saveNote' on='click'}}>Save Note</button>{{/if}}
 </div>
