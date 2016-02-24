@@ -9,11 +9,7 @@
     </form>
   </div>
 
-  {{#each model as |note|}}
-    {{#link-to 'notes.note' note class="note-list-item"}}
-      {{note.id}}
-    {{/link-to}}
-  {{/each}}
+  {{note-list notes=model}}
 </div>
 
 {{outlet}}
