@@ -8,11 +8,7 @@
     {{/if}}
   </div>
 
-  {{note-counter note=model}}
-
   {{textarea value=model.content class="note-body"}}
-
-  {{html-renderer note=model}}
 
   {{#if model.hasDirtyAttributes}}<button {{action 'saveNote' on='click'}}>Save Note</button>{{/if}}
 </div>
