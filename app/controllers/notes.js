@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 const electron = require('electron');
 const ipc = electron.ipcRenderer;
-const remote = electron.remote;
-const mainProcess = remote.require('./electron.js');
+const mainProcess = electron.remote.require('./electron.js');
 
 export default Ember.Controller.extend({
 
@@ -16,7 +15,7 @@ export default Ember.Controller.extend({
   _updateMenu: Ember.observer('model.[]', function () {
     console.log('wowowow');
     let notes = this.get('model').toArray().map(note => {
-      return note.serialize({includeId: true})
+      return note.serialize({includeId: true});
     });
 
     mainProcess.updateMenu(notes);

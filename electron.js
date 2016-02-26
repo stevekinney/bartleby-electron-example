@@ -35,14 +35,7 @@ app.on('ready', function onReady() {
   mainWindow.loadURL(emberAppLocation);
   appIcon = new Tray('./assets/icon.png');
 
-  var contextMenu = Menu.buildFromTemplate([
-    { label: 'Item1', type: 'radio' },
-    { label: 'Item2', type: 'radio' },
-    { label: 'Item3', type: 'radio', checked: true },
-    { label: 'Item4', type: 'radio' }
-  ]);
   appIcon.setToolTip('This is my application.');
-  appIcon.setContextMenu(contextMenu);
 
   mainWindow.webContents.on('did-fail-load', () => {
     mainWindow.loadURL(emberAppLocation);
